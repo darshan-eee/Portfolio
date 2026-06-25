@@ -20,7 +20,7 @@ const SKILLS = [
     category: 'Frontend',
     icon: '🖥️',
     accent: '#E11D48',
-    items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+    items: ['React', 'HTML', 'CSS', 'Next.js', 'TypeScript', 'Tailwind CSS'],
   },
   {
     category: 'Backend',
@@ -38,11 +38,11 @@ const SKILLS = [
 
 const PROJECTS = [
   {
-    title: 'ShopFlow',
-    desc: 'Full-stack e-commerce platform with real-time inventory, Stripe payments, and an admin dashboard.',
-    tags: ['Next.js', 'PostgreSQL', 'Stripe', 'Docker'],
+    title: 'Attendance System',
+    desc: 'A robust web-based management platform utilizing automated student logging features, administrative controls, and comprehensive roll tracking.',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'HTML', 'CSS'],
     accent: '#E11D48',
-    link: '#',
+    link: 'https://attendance-system-1-kec-frontend.onrender.com',
   },
   {
     title: 'DevCollab',
@@ -231,7 +231,6 @@ export default function App() {
         justifyContent: 'center', padding: '140px 48px 80px',
         maxWidth: 960, margin: '0 auto', position: 'relative', zIndex: 1,
       }}>
-        {/* Subtle grid background */}
         <div style={{
           position: 'absolute', inset: 0, zIndex: -1,
           backgroundImage: 'linear-gradient(rgba(225,29,72,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(225,29,72,0.03) 1px, transparent 1px)',
@@ -349,7 +348,7 @@ export default function App() {
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 20 }}>
                 {p.tags.map((t) => <span key={t} className="tag">{t}</span>)}
               </div>
-              <a href={p.link} style={{
+              <a href={p.link} target="_blank" rel="noopener noreferrer" style={{
                 display: 'inline-flex', alignItems: 'center', gap: 5,
                 color: p.accent, fontSize: 12, fontWeight: 600, textDecoration: 'none',
                 fontFamily: "'DM Sans', ui-sans-serif, system-ui, sans-serif", letterSpacing: '0.06em', textTransform: 'uppercase',
@@ -388,14 +387,18 @@ export default function App() {
           display: 'flex', gap: 28, marginTop: 52, paddingTop: 36,
           borderTop: '1px solid #0F1117',
         }}>
-          {[['GitHub', 'https://github.com'], ['LinkedIn', 'https://linkedin.com'], ['darshan.gopinath2006@gmail.com', 'mailto:darshan.gopinath2006@gmail.com']].map(([label, href]) => (
+          {[
+            ['GitHub', 'https://github.com'],
+            ['LinkedIn', 'https://linkedin.com'],
+            ['darshan.gopinath2006@gmail.com', 'mailto:darshan.gopinath2006@gmail.com']
+          ].map(([label, href]) => (
             <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{
               color: '#8B96A8', fontSize: 13, textDecoration: 'none', fontWeight: 600,
               fontFamily: "'DM Sans', ui-sans-serif, system-ui, sans-serif", letterSpacing: '0.05em',
               textTransform: 'uppercase', transition: 'color 0.2s',
             }}
               onMouseEnter={e => e.target.style.color = '#E11D48'}
-              onMouseLeave={e => e.target.style.color = '#334155'}>
+              onMouseLeave={e => e.target.style.color = '#8B96A8'}>
               {label} ↗
             </a>
           ))}
